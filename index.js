@@ -32,5 +32,4 @@ app.get('/:time', function(req, res) {
 });
 
 
-console.log("Listening at :\t https://timestamp-thourum-2.c9users.io/")
-app.listen(8080);
+app.listen(process.env.PORT || 8000)
