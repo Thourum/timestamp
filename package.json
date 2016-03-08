@@ -1,0 +1,14 @@
+{
+  "name": "timestamp",
+  "version": "1.0.0",
+  "description": "return natural or unix time if given natural or unix style time in url",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \\\"Error: no test specified\\\" && exit 1"
+  },
+  "author": "Thourum",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.13.4"
+  }
+}
