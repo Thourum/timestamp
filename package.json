@@ -4,9 +4,9 @@
   "description": "return natural or unix time if given natural or unix style time in url",
   "main": "index.js",
   "scripts": {
-    "test": "echo \\\"Error: no test specified\\\" && exit 1"
+    "test": "echo \\\"Error: no test specified\\\" && exit 1",
+  	"start": "node index.js"
   },
-  "start": "node index.js",
   "author": "Thourum",
   "license": "MIT",
   "dependencies": {
