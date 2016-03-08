@@ -10,23 +10,22 @@ var dateJson = {"unix": null , "natural": null};
 app.get('/', function(req, res) {
   res.send("Hello");
   total_opens++;
-  console.log(" Total : \t"+ total_opens);
 });
 
 app.get('/:time', function(req, res) {
   if (Number(req.params.time)){
     var myDate = new Date( req.params.time *1000);
-    console.log(myDate);
     dateJson.natural = months[myDate.getMonth()]+" "+myDate.getDate()+", "+(myDate.getYear()+1900);
     dateJson.unix = parseInt(req.params.time, 10 );
-    console.log("got Number");
     res.send(dateJson);
   }else {
     var myDate = new Date(req.params.time); // Your timezone!
     var myEpoch = myDate.getTime()/1000.0;
     var myNaturalDate = new Date(myEpoch *1000);
-    dateJson.natural = months[myNaturalDate.getMonth()]+" "+myNaturalDate.getDate()+", "+(myNaturalDate.getYear()+1900);
-    dateJson.unix = parseInt(myEpoch, 10);
+    if (typeof myEpoch === new Date()){
+        dateJson.unix = parseInt(myEpoch, 10);
+        dateJson.natural = months[myNaturalDate.getMonth()]+" "+myNaturalDate.getDate()+", "+(myNaturalDate.getYear()+1900);
+    }
     res.send(dateJson);
   }
 });
