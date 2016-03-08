@@ -1,8 +1,7 @@
 {
-    "name": "Node.js Getting Started",
-    "description": "A barebones Node.js app using Express 4",
-    "repository": "https://github.com/heroku/node-js-getting-started",
+    "name": "timestamp microservice",
+    "description": "I can pass a string as a parameter, and it will check to see whether that string contains either a unix timestamp or a natural language.",
+    "repository": "https://github.com/Thourum/timestamp",
     "logo": "http://node-js-sample.herokuapp.com/node.svg",
-    "keywords": ["node", "express", "static"],
-    "image": "heroku/nodejs"
+    "keywords": ["node", "microservice", "time"]
 }
